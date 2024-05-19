@@ -1,8 +1,11 @@
 import express from "express";
 const app = express();
-import * as dotenv from "dotenv";
-dotenv.config();
+
+import supabaseroutes from "./routes/supabaseroutes.js";
 import supabase from "./utils/superbase.js";
+
+// routes
+app.use("/", supabaseroutes);
 
 app.get("/", (req, res) => {
   res.send("helloo");
