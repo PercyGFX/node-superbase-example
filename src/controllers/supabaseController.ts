@@ -3,9 +3,12 @@ import supabase from "../utils/superbase.js";
 
 export const getusers = async (req: Request, res: Response) => {
 
- const {data, error} = await supabase
- .from("user")
- .select()
+    const userId = 1
+
+ const { data, error } = await supabase
+   .from("posts")
+   .select()
+   .eq("user_id", userId);
 
  console.log(data)
 
