@@ -13,5 +13,3 @@ export const getusers = async (req: Request, res: Response) => {
 
   res.json(data);
 };
-
-// jhhjhjg
